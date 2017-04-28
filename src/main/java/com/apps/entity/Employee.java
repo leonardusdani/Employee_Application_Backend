@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -69,12 +71,13 @@ public class Employee implements Serializable {
     @Column(name="email", nullable = true)
     private String email;
     
-    @Column(name="location", nullable = true)
-    private String location;
+    @ManyToOne
+    @JoinColumn(name="locationId", nullable = true)
+    private Location location;
     
     @Column(name="image_path", nullable = true)
     private String imagePath;
-    
+
     
     public Integer getId() {
         return id;
@@ -196,13 +199,14 @@ public class Employee implements Serializable {
         this.email = email;
     }
 
-    public String getLocation() {
+    public Location getLocation() {
         return location;
     }
 
-    public void setLocation(String location) {
+    public void setLocation(Location location) {
         this.location = location;
     }
+
 
     public String getImagePath() {
         return imagePath;

@@ -1,7 +1,9 @@
 package com.apps;
 
 import com.apps.entity.Employee;
+import com.apps.entity.Location;
 import com.apps.repository.EmployeeRepository;
+import com.apps.repository.LocationRepository;
 import java.sql.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -16,6 +18,9 @@ public class EmployeeApplication {
     
         @Autowired
         private EmployeeRepository employeeRepository; 
+        
+        @Autowired
+        private LocationRepository locationRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(EmployeeApplication.class, args);
@@ -24,6 +29,16 @@ public class EmployeeApplication {
         @Bean
         public CommandLineRunner initData(){
             return arg ->{
+                Location location = new Location();
+                location.setCity("Bali");
+                locationRepository.save(location);
+                
+                
+                Location location1 = new Location();
+                location1.setCity("Yogyakarta");
+                locationRepository.save(location1);
+                
+                
                 Employee employee = new Employee();
                 employee.setFirstName("Leonardus");
                 employee.setSubDivision("Java Bootcamp");
@@ -41,7 +56,7 @@ public class EmployeeApplication {
                 employee.setDivision("Swd-Red");
                 employee.setPhone("+628995145266");
                 employee.setEmail("leonardus.dani@mitrais.com");
-                employee.setLocation("Jakarta");
+                employee.setLocation(location);
                 employeeRepository.save(employee);
 		
                 Employee employee1 = new Employee();
@@ -60,7 +75,7 @@ public class EmployeeApplication {
                 employee1.setDivision("Swd-Red");
                 employee1.setPhone("+628995145266");
                 employee1.setEmail("ardi.pratama@mitrais.com");
-                employee1.setLocation("Jakarta");
+                employee1.setLocation(location);
                 employeeRepository.save(employee1);
                 
                 Employee employee2 = new Employee();
@@ -79,7 +94,7 @@ public class EmployeeApplication {
                 employee2.setDivision("Swd-Red");
                 employee2.setPhone("+628995145266");
                 employee2.setEmail("emma.christine@mitrais.com");
-                employee2.setLocation("Jakarta");
+                employee2.setLocation(location);
                 employeeRepository.save(employee2);
             };
         }
