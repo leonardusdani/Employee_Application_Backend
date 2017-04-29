@@ -53,7 +53,7 @@ public class EmployeeApplication {
                 employee.setNationality("Indonesian");
                 employee.setGrade("SE-JP");
                 employee.setMaritalStatus("Single");
-                employee.setDivision("Swd-Red");
+                employee.setDivision("SWD-Red");
                 employee.setPhone("+628995145266");
                 employee.setEmail("leonardus.dani@mitrais.com");
                 employee.setLocation(location);
@@ -72,7 +72,7 @@ public class EmployeeApplication {
                 employee1.setNationality("Indonesian");
                 employee1.setGrade("SE-JP");
                 employee1.setMaritalStatus("Single");
-                employee1.setDivision("Swd-Red");
+                employee1.setDivision("SWD-Red");
                 employee1.setPhone("+628995145266");
                 employee1.setEmail("ardi.pratama@mitrais.com");
                 employee1.setLocation(location);
@@ -91,7 +91,7 @@ public class EmployeeApplication {
                 employee2.setNationality("Indonesian");
                 employee2.setGrade("SE-JP");
                 employee2.setMaritalStatus("Single");
-                employee2.setDivision("Swd-Red");
+                employee2.setDivision("SWD-Red");
                 employee2.setPhone("+628995145266");
                 employee2.setEmail("emma.christine@mitrais.com");
                 employee2.setLocation(location);

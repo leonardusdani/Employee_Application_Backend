@@ -16,5 +16,5 @@ import org.springframework.data.repository.query.Param;
  */
 public interface EmployeeRepository extends PagingAndSortingRepository<Employee, Integer> {
     
-    public List<Employee> findByFirstNameContainingIgnoreCase(@Param("firstName") String firstName);
+    public List<Employee> findByFirstNameContainingIgnoreCaseOrLastNameContainingIgnoreCase(@Param("firstName") String firstName,@Param("lastName")String lastName);
 }

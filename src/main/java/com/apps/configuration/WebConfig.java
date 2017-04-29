@@ -21,7 +21,8 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/api/image/**")
-				.addResourceLocations("file:////home/machine/Pictures/temp/")
+				//.addResourceLocations("file:////home/machine/Pictures/temp/")
+                                  .addResourceLocations("file:///D:/temp/")                      
 				.setCachePeriod(0);
 	}
 

@@ -24,7 +24,8 @@ import org.springframework.web.multipart.MultipartFile;
 @Controller
 public class ImageController {
     
-    private static String UPLOADED_FOLDER = "/home/machine/Pictures/temp/";
+    //private static String UPLOADED_FOLDER = "/home/machine/Pictures/temp/";
+    private static String UPLOADED_FOLDER = "D://temp//";
 
     @RequestMapping(value = "api/upload-image", method = RequestMethod.POST)
     @ResponseBody
