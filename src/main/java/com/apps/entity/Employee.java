@@ -77,6 +77,8 @@ public class Employee implements Serializable {
     
     @Column(name="image_path", nullable = true)
     private String imagePath;
+    
+    public Employee(){}
 
     
     public Integer getId() {
