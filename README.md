@@ -13,7 +13,7 @@ Employee application backend, it uses spring-boot 1.5.2 template project. Please
 
 ## How to execute:
 
-1. Please make sure you already install java 8 on your glocal machine
+1. Please make sure you already install java 8 on your local machine
 2. Change directory to `[root directory]/compiled_backend`
 3. Run `java -jar EmployeeApplication-0.0.1-SNAPSHOT.jar`
 4. Please keep `temp` folder inside `compiled_backend`, it uses for store the images. 
