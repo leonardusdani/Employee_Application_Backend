@@ -17,4 +17,4 @@ Employee application backend, it uses spring-boot 1.5.2 template project. Please
 2. Change directory to `[root directory]/compiled_backend`
 3. Run `java -jar EmployeeApplication-0.0.1-SNAPSHOT.jar`
 4. Please keep `temp` folder inside `compiled_backend`, it uses for store the images. 
-5. Open your browser then open `http://localhost:8080`
+5. Open your browser then open `http://localhost:8080/api`, it should redirect your browser into the HAL browser entry point page.
